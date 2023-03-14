@@ -1,0 +1,31 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 20px;
+  padding-bottom: 20px;
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
+.flex-row {
+  display: flex;
+  justify-content: center;
+}
+
+.email-mobile {
+  display: flex;
+  width: 10px;
+  flex-basis: 10%;
+  @media screen and (min-width: 820px) {
+    display: none;
+  }
+}
+.email {
+  display: none;
+  @media screen and (min-width: 820px) {
+    display: flex;
+  }
+}

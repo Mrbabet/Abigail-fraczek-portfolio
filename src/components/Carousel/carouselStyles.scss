@@ -1,0 +1,36 @@
+.carousel {
+  min-height: calc(100vh - 64px - 44px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 100;
+
+  position: absolute;
+  @media screen and (min-width: 1440px) {
+    position: static;
+  }
+}
+.carousel-slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 12vh;
+}
+.carousel-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+.carousel-item {
+  font-weight: 400;
+  font-size: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  width: max-content;
+  height: 12vh;
+}

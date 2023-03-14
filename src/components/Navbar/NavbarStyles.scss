@@ -1,0 +1,31 @@
+.container {
+  padding-top: 16px;
+  padding-inline: 16px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+}
+.logo {
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+.info-btn {
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 99vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  width: 58px;
+  height: 48px;
+}
+.info-link {
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
