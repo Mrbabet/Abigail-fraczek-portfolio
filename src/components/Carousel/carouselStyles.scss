@@ -1,13 +1,11 @@
 .carousel {
+  padding-left: 3rem;
   min-height: calc(100vh - 64px - 44px);
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  overflow: hidden;
   z-index: 100;
 
-  position: absolute;
   @media screen and (min-width: 1440px) {
     position: static;
   }
@@ -22,7 +20,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
+  gap: 3rem;
 }
 .carousel-item {
   font-weight: 400;

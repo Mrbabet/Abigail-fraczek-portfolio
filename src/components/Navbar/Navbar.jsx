@@ -1,12 +1,13 @@
 import "./NavbarStyles.scss";
 import { Link, NavLink } from "react-router-dom";
+import Breadcrumb from "../BreadCrumb/Breadcrumb";
 
 const Navbar = () => {
   return (
     <nav className="container nav__container">
       <div className="name">
         <Link to="/" className="logo">
-          Abigail Frączek
+          Abigail Frączek <Breadcrumb />
         </Link>
       </div>
 
