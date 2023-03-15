@@ -1,7 +1,14 @@
-import "./portfolioStyles.css";
+import "./portfolioStyles.scss";
+import Footer from "../../components/Footer/Footer";
+import Navbar from "../../components/Navbar/Navbar";
 
 const Portfolio = () => {
-  return <div>Portfolio</div>;
+  return (
+    <div className="portfolio">
+      <Navbar />
+      <Footer />
+    </div>
+  );
 };
 
 export default Portfolio;

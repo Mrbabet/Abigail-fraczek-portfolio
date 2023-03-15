@@ -7,8 +7,9 @@ const Navbar = () => {
     <nav className="container nav__container">
       <div className="name">
         <Link to="/" className="logo">
-          Abigail Frączek <Breadcrumb />
+          Abigail Frączek
         </Link>
+        <Breadcrumb />
       </div>
 
       <div className="info-btn">

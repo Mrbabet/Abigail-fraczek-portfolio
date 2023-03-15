@@ -1,7 +1,14 @@
-import "./infoStyles.css";
+import "./infoStyles.scss";
+import Footer from "../../components/Footer/Footer";
+import Navbar from "../../components/Navbar/Navbar";
 
 const Info = () => {
-  return <div>Info</div>;
+  return (
+    <div className="info">
+      <Navbar />
+      <Footer />
+    </div>
+  );
 };
 
 export default Info;
