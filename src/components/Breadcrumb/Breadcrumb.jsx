@@ -16,7 +16,7 @@ const Breadcrumb = () => {
         </div>
       );
     });
-  console.log(location);
+
   return <div className="breadcrumbs">{crumbs}</div>;
 };
 

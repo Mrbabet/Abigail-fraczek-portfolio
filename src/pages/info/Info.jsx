@@ -4,8 +4,9 @@ import Navbar from "../../components/Navbar/Navbar";
 
 const Info = () => {
   return (
-    <div className="info">
+    <div className="infopage">
       <Navbar />
+      <main></main>
       <Footer />
     </div>
   );

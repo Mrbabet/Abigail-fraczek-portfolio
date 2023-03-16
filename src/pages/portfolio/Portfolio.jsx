@@ -4,10 +4,13 @@ import Navbar from "../../components/Navbar/Navbar";
 
 const Portfolio = () => {
   return (
-    <div className="portfolio">
-      <Navbar />
-      <Footer />
-    </div>
+    <>
+      <div className="portfoliopage">
+        <Navbar />
+        <main></main>
+        <Footer />
+      </div>
+    </>
   );
 };
 

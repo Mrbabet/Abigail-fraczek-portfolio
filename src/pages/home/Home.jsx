@@ -9,8 +9,10 @@ const Home = () => {
   return (
     <div className="homepage">
       <Navbar />
-      <Showreal />
-      <PortfolioBtn />
+      <main>
+        <Showreal />
+        <PortfolioBtn />
+      </main>
       <Footer />
     </div>
   );

@@ -31,3 +31,16 @@
   color: black;
   cursor: pointer;
 }
+.name {
+  display: flex;
+  gap: 1rem;
+}
+.breadcrumbs {
+  display: flex;
+  gap: 1rem;
+  a {
+    text-decoration: none;
+    color: black;
+    text-transform: capitalize;
+  }
+}

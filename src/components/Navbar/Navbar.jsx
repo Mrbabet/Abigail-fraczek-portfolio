@@ -4,7 +4,7 @@ import Breadcrumb from "../BreadCrumb/Breadcrumb";
 
 const Navbar = () => {
   return (
-    <nav className="container nav__container">
+    <header className="container nav__container">
       <div className="name">
         <Link to="/" className="logo">
           Abigail Frączek
@@ -17,7 +17,7 @@ const Navbar = () => {
           Info
         </Link>
       </div>
-    </nav>
+    </header>
   );
 };
 
