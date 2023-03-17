@@ -1,7 +1,8 @@
 import "./NavbarStyles.scss";
 import { Link, NavLink } from "react-router-dom";
 import Breadcrumb from "../BreadCrumb/Breadcrumb";
-
+import PrevPageBtn from "../../components/PrevPageBtn/PrevPageBtn";
+import { useLocation } from "react-router-dom";
 const Navbar = () => {
   return (
     <header className="container nav__container">
@@ -11,11 +12,15 @@ const Navbar = () => {
         </Link>
         <Breadcrumb />
       </div>
-
-      <div className="info-btn">
-        <Link to="/info" className="info-link">
-          Info
-        </Link>
+      <div className="right-side">
+        {location.pathname !== "/info" && (
+          <div className="info-btn">
+            <Link to="/info" className="info-link">
+              Info
+            </Link>
+          </div>
+        )}
+        <PrevPageBtn />
       </div>
     </header>
   );

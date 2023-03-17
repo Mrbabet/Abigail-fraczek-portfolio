@@ -34,6 +34,7 @@
 .name {
   display: flex;
   gap: 1rem;
+  align-items: center;
 }
 .breadcrumbs {
   display: flex;
@@ -43,4 +44,18 @@
     color: black;
     text-transform: capitalize;
   }
+}
+.right-side {
+  display: flex;
+  gap: 1rem;
+}
+.prev-page-btn {
+  width: 42px;
+  height: 42px;
+  border: 1px solid black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
 }
