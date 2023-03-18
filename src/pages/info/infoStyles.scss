@@ -1,6 +1,9 @@
 .infopage {
   min-height: 100vh;
 }
+main {
+  min-height: calc(100vh - 102px);
+}
 
 .grid-container {
   margin-inline: 16px;

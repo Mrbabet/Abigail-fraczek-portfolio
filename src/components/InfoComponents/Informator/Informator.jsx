@@ -4,8 +4,21 @@ const Informator = () => {
   return (
     <div className="informator-components">
       <div className="click-items">
-        <div className="'click-items__title">Za co płacisz?</div>
-        <div className="click-items-btns"></div>
+        <div className="click-items__title">Za co płacisz?</div>
+        <div className="click-items-btns">
+          <button>Wiedza</button>
+          <button>Doświadczenie</button>
+          <button>Umiejętności</button>
+          <button>Research</button>
+          <button>Strategia</button>
+          <button>Konsultacje</button>
+          <button>Przygotowanie plików</button>
+          <button>Licencje</button>
+          <button>Programy graficzne</button>
+          <button>Kursy zawodowe</button>
+          <button>Sprzęt</button>
+          <button>Opłaty firmowe</button>
+        </div>
       </div>
 
       <div className="informator">
