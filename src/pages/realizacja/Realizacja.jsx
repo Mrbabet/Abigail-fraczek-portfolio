@@ -1,4 +1,4 @@
-import "./realizacjaStyles.css";
+import "./realizacjaStyles.scss";
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 const Realizacja = () => {

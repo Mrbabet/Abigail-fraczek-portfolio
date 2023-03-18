@@ -16,7 +16,7 @@ const Info = () => {
   const [currentSubNav, setCurrentSubNav] = useState(<Contact />);
 
   return (
-    <div className="infopage">
+    <>
       <Navbar />
       <main>
         <div className="grid-container">
@@ -56,7 +56,7 @@ const Info = () => {
         </div>
       </main>
       <Footer />
-    </div>
+    </>
   );
 };
 
