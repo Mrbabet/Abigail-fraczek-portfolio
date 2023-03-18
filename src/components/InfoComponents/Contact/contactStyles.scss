@@ -1,41 +1,98 @@
-.designer,
-.link,
-.education,
-.skills,
-.programs {
-  grid-column: 1 / span 4;
-  @media screen and (min-width: 820px) {
-  }
-}
 .bold {
   font-weight: bold;
+  font-size: 15px;
+  line-height: 21px;
+  letter-spacing: -0.005em;
 }
+
 .designer {
+  grid-column: 1/5;
   margin-bottom: 60px;
+  margin-top: 120px;
+
+  @media screen and (min-width: 820px) {
+    grid-column: 3/8;
+    margin-top: 165px;
+  }
+  @media screen and (min-width: 1280px) {
+    display: flex;
+    grid-column: 5/11;
+    margin-top: 77px;
+  }
   .designer__avatar {
     margin-bottom: 24px;
+    @media screen and (min-width: 1280px) {
+      display: none;
+      img {
+        width: 84px;
+        height: 84px;
+      }
+    }
   }
   .designer__name {
     margin-bottom: 16px;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: -0.005em;
+  }
+  .designer__description {
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: -0.005em;
+  }
+}
+.designer__avatar-desktop {
+  display: none;
+  @media screen and (min-width: 1280px) {
+    grid-column: 4/5;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    img {
+      width: 84px;
+      height: 84px;
+    }
   }
 }
 .links {
+  grid-column: 1/4;
   margin-bottom: 60px;
   display: flex;
   flex-direction: column;
   gap: 36px;
+
+  @media screen and (min-width: 820px) {
+    gap: 24px;
+    grid-column: 3/8;
+  }
+
+  @media screen and (min-width: 1280px) {
+    grid-column: 5/11;
+    display: flex;
+  }
+
   ul {
     list-style: none;
     li {
       padding-bottom: 1px;
       border-bottom: 1px solid black;
       width: fit-content;
+      font-size: 15px;
+      line-height: 21px;
+      letter-spacing: -0.005em;
+      @media screen and (min-width: 820px) {
+        letter-spacing: -0.015em;
+      }
     }
   }
   .social-media {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    @media screen and (min-width: 820px) {
+      flex-direction: row;
+    }
   }
 }
 .education,
@@ -47,5 +104,52 @@
   margin-bottom: 36px;
   ul {
     list-style: none;
+  }
+}
+.education__description {
+  width: 229px;
+  font-size: 15px;
+  line-height: 21px;
+  letter-spacing: -0.005em;
+  @media screen and (min-width: 820px) {
+    letter-spacing: -0.015em;
+  }
+}
+.skills {
+  ul {
+    li {
+      font-size: 15px;
+      line-height: 21px;
+      letter-spacing: -0.005em;
+      @media screen and (min-width: 820px) {
+        letter-spacing: -0.015em;
+      }
+    }
+  }
+}
+.programs {
+  ul {
+    li {
+      font-size: 15px;
+      line-height: 21px;
+      letter-spacing: -0.005em;
+      @media screen and (min-width: 820px) {
+        letter-spacing: -0.015em;
+      }
+    }
+  }
+}
+
+.flex-row {
+  grid-column: 1/4;
+  @media screen and (min-width: 820px) {
+    gap: 24px;
+    grid-column: 3/8;
+  }
+
+  @media screen and (min-width: 1280px) {
+    display: flex;
+    gap: 80px;
+    grid-column: 5/11;
   }
 }
