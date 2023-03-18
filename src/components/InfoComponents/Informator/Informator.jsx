@@ -1,8 +1,8 @@
-import React from "react";
+import "./informatorStyles.scss";
 
 const Informator = () => {
   return (
-    <div className="info-components">
+    <div className="informator-components">
       <div className="click-items">
         <div className="'click-items__title">Za co płacisz?</div>
         <div className="click-items-btns"></div>

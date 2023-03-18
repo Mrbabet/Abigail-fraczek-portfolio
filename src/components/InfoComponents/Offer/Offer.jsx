@@ -1,10 +1,13 @@
-import React from "react";
+import "./offerStyles.scss";
 
 const Offer = () => {
   return (
-    <div className="info-components">
+    <div className="offer-components">
       <div className="offer">
-        Logo <span className="offer__price">800-2 600 zł</span>
+        <div className="offer-header">
+          <span className="title">Logo</span>
+          <span className="offer__price">800 - 2 600 zł</span>
+        </div>
         <ul>
           <li>Zestaw pytań pomagających nakreślić strategię brandingową</li>
           <li>Analiza konstrukcji</li>
@@ -17,7 +20,10 @@ const Offer = () => {
         </ul>
       </div>
       <div className="offer">
-        Identyfikacja wizualna<span className="offer__price">2400 zł +</span>
+        <div className="offer-header">
+          <span className="title">Identyfikacja wizualna</span>
+          <span className="offer__price">2400 zł +</span>
+        </div>
         <ul>
           <li>Logo</li>
           <li>Kolorystyka marki</li>
@@ -27,7 +33,9 @@ const Offer = () => {
         </ul>
       </div>
       <div className="offer">
-        Materiały promocyjne
+        <div className="offer-header">
+          <span className="title">Materiały promocyjne</span>
+        </div>
         <ul>
           <li>
             Wizytówka<span className="offer__price">200 zł +</span>
@@ -92,15 +100,20 @@ const Offer = () => {
         </ul>
       </div>
       <div className="offer">
-        Media społecznościowe <span className="offer__price">200 zł +</span>
+        <div className="offer-header">
+          <span className="title"> Media społecznościowe</span>
+          <span className="offer__price">200 zł +</span>
+        </div>
         <ul>
           <li>Grafika/ki</li>
           <li>Post/y</li>
         </ul>
       </div>
       <div className="offer">
-        Strona internetowa typu Wizytówka{" "}
-        <span className="offer__price">3000 zł +</span>
+        <div className="offer-header">
+          <span className="title"> Strona internetowa typu Wizytówka</span>
+          <span className="offer__price">3000 zł +</span>
+        </div>
         <ul>
           <li>
             Analiza UX (audyt konkurencji, 3 persony, cele konwersji, user-flow,
@@ -111,10 +124,19 @@ const Offer = () => {
         </ul>
       </div>
       <div className="offer">
-        Ilustracja <span className="offer__price">3000 zł +</span>
+        <div className="offer-header">
+          <span className="title">Ilustracja</span>
+          <span className="offer__price">3000 zł +</span>
+        </div>
       </div>
-      <div className="offer"> Rebranding / Redesign</div>
-      <span className="offer__price">*ceny netto</span>
+      <div className="offer">
+        <div className="offer-header">
+          <span className="title">Rebranding / Redesign</span>
+        </div>
+      </div>
+      <div className="offer-header">
+        <span className="offer__price">*ceny netto</span>
+      </div>
     </div>
   );
 };

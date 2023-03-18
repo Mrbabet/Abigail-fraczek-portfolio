@@ -1,14 +1,15 @@
 import "../info/infoStyles.scss";
 import "../../components/InfoComponents/Contact/contactStyles.scss";
+import "../../components/InfoComponents/Offer/offerStyles.scss";
 
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 
 import Contact from "../../components/InfoComponents/Contact/Contact";
 import ScrollTopBtn from "../../components/ScrollTopBtn/ScrollTopBtn";
-import Informator from "../../components/InfoComponents/Informator";
-import Offer from "../../components/InfoComponents/Offer";
-import Glossary from "../../components/InfoComponents/Glossary";
+import Informator from "../../components/InfoComponents/Informator/Informator";
+import Offer from "../../components/InfoComponents/Offer/Offer";
+import Glossary from "../../components/InfoComponents/Glossary/Glossary";
 import { useState } from "react";
 
 const Info = () => {

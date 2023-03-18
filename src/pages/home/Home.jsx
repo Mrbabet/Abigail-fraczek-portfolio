@@ -1,4 +1,4 @@
-import "./homeStyles.css";
+import "./homeStyles.scss";
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 import PortfolioBtn from "../../components/PortfolioBtn/PortfolioBtn";
