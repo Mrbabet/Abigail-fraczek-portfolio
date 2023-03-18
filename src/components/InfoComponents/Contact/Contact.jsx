@@ -1,14 +1,19 @@
+import Avatar from "../../../assets/images/Photo.png";
+
 const Contact = () => {
   return (
     <div className="info-components">
       <div className="designer">
-        <div className="designer__name">Abigail Frączek</div>
+        <div className="designer__avatar">
+          <img src={Avatar} alt="" />
+        </div>
+        <div className=" designer__name bold">Abigail Frączek</div>
         <p className="designer__description">
-          Jestem projektantką graficzną, junior UI/UX designerką oraz
-          ilustratorką. Swoje zdolności artystyczne rozwijam od dziecka, grafikę
-          projektową poznaję od 10 lat. Chcę zgłębiać kierunki digital designu i
-          uczyć się od lepszych. Lubię rysować portrety, lubię minimalizm i
-          lubię dobrych ludzi.
+          Jestem projektantką graficzną, UI/UX designerką oraz ilustratorką.
+          Swoje zdolności artystyczne rozwijam od dziecka, grafikę projektową
+          poznaję od 10 lat. Chcę zgłębiać kierunki digital designu i uczyć się
+          od lepszych. Lubię rysować portrety, lubię minimalizm i lubię dobrych
+          ludzi.
         </p>
       </div>
       <div className="links">
@@ -24,7 +29,7 @@ const Contact = () => {
         </ul>
       </div>
       <div className="education">
-        <div className="education__header">Wykształcenie</div>
+        <div className="education__header bold">Wykształcenie</div>
         <p className="education__description">
           Magistra Sztuki na wydziale Grafiki Akademia Sztuk Pięknych im. W.
           Strzemińskiego w Łodzi
@@ -32,7 +37,8 @@ const Contact = () => {
         <p className="education__description">Kurs Digital Designer</p>
       </div>
       <div className="skills">
-        Umiejętności
+        <div className="skills__header bold">Umiejętności</div>
+
         <ul>
           <li>Logo</li>
           <li>Identyfikacja wizualna</li>
@@ -44,7 +50,8 @@ const Contact = () => {
         </ul>
       </div>
       <div className="programs">
-        Programy
+        <div className="programs__header bold">Programy</div>
+
         <ul>
           <li>Ilustrator</li>
           <li>Photoshop</li>

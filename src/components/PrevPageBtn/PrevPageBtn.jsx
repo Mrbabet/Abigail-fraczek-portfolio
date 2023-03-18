@@ -5,7 +5,6 @@ import prevPageBtnArrow from "../../assets/images/prevpagebtnarrow.svg";
 const PrevPageBtn = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  console.log(location.pathname);
 
   return (
     <>

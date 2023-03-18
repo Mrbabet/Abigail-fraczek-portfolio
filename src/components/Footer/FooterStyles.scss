@@ -10,22 +10,3 @@
     color: black;
   }
 }
-.flex-row {
-  display: flex;
-  justify-content: center;
-}
-
-.email-mobile {
-  display: flex;
-  width: 10px;
-  flex-basis: 10%;
-  @media screen and (min-width: 820px) {
-    display: none;
-  }
-}
-.email {
-  display: none;
-  @media screen and (min-width: 820px) {
-    display: flex;
-  }
-}

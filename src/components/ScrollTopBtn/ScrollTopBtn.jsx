@@ -5,7 +5,7 @@ const ScrollTopBtn = () => {
   const [scrollTopBtn, setScrollTopBtn] = useState(false);
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 1000) {
+      if (window.scrollY > 200) {
         setScrollTopBtn(true);
       } else {
         setScrollTopBtn(false);

@@ -1,0 +1,51 @@
+.designer,
+.link,
+.education,
+.skills,
+.programs {
+  grid-column: 1 / span 4;
+  @media screen and (min-width: 820px) {
+  }
+}
+.bold {
+  font-weight: bold;
+}
+.designer {
+  margin-bottom: 60px;
+  .designer__avatar {
+    margin-bottom: 24px;
+  }
+  .designer__name {
+    margin-bottom: 16px;
+  }
+}
+.links {
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  ul {
+    list-style: none;
+    li {
+      padding-bottom: 1px;
+      border-bottom: 1px solid black;
+      width: fit-content;
+    }
+  }
+  .social-media {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+.education,
+.skills,
+.programs {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 36px;
+  ul {
+    list-style: none;
+  }
+}
