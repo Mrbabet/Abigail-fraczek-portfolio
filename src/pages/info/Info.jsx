@@ -6,7 +6,6 @@ import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 
 import Contact from "../../components/InfoComponents/Contact/Contact";
-import ScrollTopBtn from "../../components/ScrollTopBtn/ScrollTopBtn";
 import Informator from "../../components/InfoComponents/Informator/Informator";
 import Offer from "../../components/InfoComponents/Offer/Offer";
 import Glossary from "../../components/InfoComponents/Glossary/Glossary";
@@ -45,8 +44,8 @@ const Info = () => {
               </button>
               <button
                 onClick={() => setCurrentSubNav(<Glossary />)}
-                className="nav-btn"
                 type="button"
+                className="nav-btn"
               >
                 Słowniczek
               </button>
