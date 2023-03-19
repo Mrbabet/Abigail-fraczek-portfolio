@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import "./breadcrumbStyles.scss";
+import breadcrumbArrow from "../../assets/images/breadcrumb-arrow.svg";
 
 const Breadcrumb = () => {
   const location = useLocation();
