@@ -1,6 +1,5 @@
-import { Link, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import "./breadcrumbStyles.scss";
-import breadcrumbArrow from "../../assets/images/breadcrumb-arrow.svg";
 
 const Breadcrumb = () => {
   const location = useLocation();
@@ -13,12 +12,21 @@ const Breadcrumb = () => {
 
       return (
         <div className="crumb" key={crumb}>
-          <Link to={currentLink}>{crumb}</Link>
+          <NavLink to={currentLink}>{crumb}</NavLink>
         </div>
       );
     });
 
-  return <div className="breadcrumbs">{crumbs}</div>;
+  return (
+    <div className="breadcrumbs">
+      <div className="crumb">
+        <NavLink to="/" className="logo">
+          Abigail Frączek
+        </NavLink>
+      </div>
+      {crumbs}
+    </div>
+  );
 };
 
 export default Breadcrumb;

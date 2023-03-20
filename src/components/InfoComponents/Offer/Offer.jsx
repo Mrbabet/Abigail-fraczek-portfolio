@@ -135,7 +135,7 @@ const Offer = () => {
         </div>
       </div>
       <div className="offer-header">
-        <span className="offer__price">*ceny netto</span>
+        <span className="offer__adn">*ceny netto</span>
       </div>
     </div>
   );

@@ -25,6 +25,7 @@
   letter-spacing: -0.005em;
   font-weight: bold;
   margin-right: 16px;
+  font-family: "Lora";
 }
 .offer__price {
   color: #757270;
@@ -33,12 +34,23 @@
   letter-spacing: -0.01em;
   font-weight: 400;
   margin-left: 16px;
+  font-family: "DM Sans";
+}
+.offer__adn {
+  color: #757270;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: -0.01em;
+  font-weight: 400;
+
+  font-family: "DM Sans";
 }
 .offer-header {
   margin-bottom: 24px;
 }
 .offer {
   ul {
+    font-family: "DM Sans";
     margin-left: 16px;
     list-style-position: outside;
     list-style-image: url(/src/assets/images/list-style-arrow.png);

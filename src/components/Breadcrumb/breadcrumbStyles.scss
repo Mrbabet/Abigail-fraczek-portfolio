@@ -1,13 +1,3 @@
-.name {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-
-  @media screen and (min-width: 820px) {
-    flex-direction: row;
-    gap: 16px;
-  }
-}
 .breadcrumbs {
   display: flex;
   flex-direction: column;
@@ -20,4 +10,11 @@
     color: black;
     text-transform: capitalize;
   }
+}
+.crumb {
+  font-family: "DM Sans";
+}
+.crumb:last-child {
+  font-weight: 700;
+  font-family: "Lora";
 }

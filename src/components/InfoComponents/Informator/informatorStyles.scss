@@ -34,8 +34,11 @@
   border: 0;
   width: max-content;
   padding: 0;
+  cursor: pointer;
+  font-family: "DM Sans";
 }
 .click-items-description {
+  font-family: "DM Sans";
   @media screen and (min-width: 820px) {
     height: 105px;
   }
@@ -56,8 +59,13 @@
   text-align: left;
   margin-bottom: 36px;
 }
+.informator__description {
+  font-family: "DM Sans";
+}
+
 .other-info {
   margin-top: 36px;
   font-size: 12px;
   line-height: 18px;
+  font-family: "DM Sans";
 }
