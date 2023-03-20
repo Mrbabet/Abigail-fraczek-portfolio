@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-import prevPageBtnArrow from "../../assets/images/prevpagebtnarrow.svg";
+import prevPageBtnArrow from "../../assets/images/prevpagebtnarrow.png";
 
 const PrevPageBtn = () => {
   const location = useLocation();
