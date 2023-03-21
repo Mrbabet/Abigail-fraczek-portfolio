@@ -9,10 +9,9 @@ const Portfolio = () => {
       <div className="portfoliopage">
         <Navbar />
         <main>
-          <PortfolioImage />
-          <PortfolioImage />
-          <PortfolioImage />
-          <PortfolioImage />
+          <div className="portfolio-grid">
+            <PortfolioImage />
+          </div>
         </main>
         <Footer />
       </div>
