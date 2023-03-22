@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-import prevPageBtnArrow from "../../assets/images/prevpagebtnarrow.png";
+import { TfiArrowLeft } from "react-icons/tfi";
 
 const PrevPageBtn = () => {
   const location = useLocation();
@@ -8,9 +8,14 @@ const PrevPageBtn = () => {
 
   return (
     <>
-      {location.pathname === "/info" && "/portfolio/realizacja" && (
+      {location.pathname === "/info" && (
         <button className="prev-page-btn" onClick={() => navigate(-1)}>
-          <img src={prevPageBtnArrow} alt="" />
+          <TfiArrowLeft />
+        </button>
+      )}
+      {location.pathname.includes("realizacja") && (
+        <button className="prev-page-btn" onClick={() => navigate(-1)}>
+          <TfiArrowLeft height={18} width="18" />
         </button>
       )}
     </>

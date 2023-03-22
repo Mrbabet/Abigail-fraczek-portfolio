@@ -21,7 +21,7 @@ const portfolioLinks = [
     Description:
       "Koncept interfejsu strony internetowej polskiej firmy budowlanej PRS-Bud Bączek.",
     Type: "video",
-    Link: "",
+    Link: "Realizacja Construction Company Web Concept Design",
   },
   {
     id: 1,
@@ -124,7 +124,7 @@ const PortfolioImage = () => {
       {portfolioLinks.map((el) =>
         el.Type === "image" ? (
           <Link
-            to={"/portfolio/realizacja"}
+            to={`/portfolio/realizacja/${el.id}`}
             key={el.id}
             className="portfolio-image "
           >
@@ -136,7 +136,7 @@ const PortfolioImage = () => {
           </Link>
         ) : (
           <Link
-            to={"/portfolio/realizacja"}
+            to={`/portfolio/realizacja/${el.id}`}
             key={el.id}
             className="portfolio-image"
           >

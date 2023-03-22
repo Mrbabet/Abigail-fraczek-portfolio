@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import scrollTopArrow from "../../assets/images/scrolltoparrow.svg";
 
 const ScrollTopBtn = () => {
   const [scrollTopBtn, setScrollTopBtn] = useState(false);
+
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 200) {
+      if (window.scrollY > 1500) {
         setScrollTopBtn(true);
       } else {
         setScrollTopBtn(false);
@@ -39,7 +39,7 @@ const ScrollTopBtn = () => {
             alignItems: "center",
           }}
         >
-          <img src={scrollTopArrow} alt="" />
+          <img src={""} alt="" />
         </button>
       )}
       ;
