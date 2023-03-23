@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { TfiArrowUp } from "react-icons/tfi";
 
 const ScrollTopBtn = () => {
   const [scrollTopBtn, setScrollTopBtn] = useState(false);
@@ -37,9 +38,10 @@ const ScrollTopBtn = () => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+            cursor: "pointer",
           }}
         >
-          <img src={""} alt="" />
+          <TfiArrowUp />
         </button>
       )}
       ;

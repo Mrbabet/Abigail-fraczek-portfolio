@@ -4,14 +4,14 @@ import {
   createRoutesFromElements,
   RouterProvider,
 } from "react-router-dom";
-import React, { Suspense } from "react";
+import React, { lazy, Suspense } from "react";
 import "./App.scss";
 
-import Home from "./pages/home/Home";
-import Info from "./pages/info/Info";
-import NotFound from "./pages/notFound/NotFound";
-import Portfolio from "./pages/portfolio/Portfolio";
-import Realizacja from "./pages/realizacja/Realizacja";
+const Home = lazy(() => import("./pages/home/Home"));
+const Info = lazy(() => import("./pages/info/Info"));
+const Portfolio = lazy(() => import("./pages/portfolio/Portfolio"));
+const Realizacja = lazy(() => import("./pages/realizacja/Realizacja"));
+const NotFound = lazy(() => import("./pages/notFound/NotFound"));
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -19,36 +19,43 @@ const router = createBrowserRouter(
       <Route
         index
         element={
-          <React.Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<div>Loading...</div>}>
             <Home />
-          </React.Suspense>
+          </Suspense>
         }
       />
       <Route
         path="info"
         element={
-          <React.Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<div>Loading...</div>}>
             <Info />
-          </React.Suspense>
+          </Suspense>
         }
       />
       <Route
         path="portfolio"
         element={
-          <React.Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<div>Loading...</div>}>
             <Portfolio />
-          </React.Suspense>
+          </Suspense>
         }
       />
       <Route
         path="portfolio/realizacja/:id"
         element={
-          <React.Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<div>Loading...</div>}>
             <Realizacja />
-          </React.Suspense>
+          </Suspense>
         }
       />
-      <Route path="*" element={<NotFound />} />
+      <Route
+        path="*"
+        element={
+          <Suspense fallback={<div>Loading...</div>}>
+            <NotFound />
+          </Suspense>
+        }
+      />
     </Route>
   )
 );

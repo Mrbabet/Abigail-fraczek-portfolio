@@ -1,7 +1,7 @@
 import "./NavbarStyles.scss";
 import "../Breadcrumb/breadcrumbStyles.scss";
 import { NavLink } from "react-router-dom";
-import Breadcrumb from "../BreadCrumb/Breadcrumb";
+import Breadcrumb from "../Breadcrumb/Breadcrumb";
 import PrevPageBtn from "../../components/PrevPageBtn/PrevPageBtn";
 
 const Navbar = () => {

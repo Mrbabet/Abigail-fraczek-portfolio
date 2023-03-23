@@ -15,7 +15,7 @@ const PrevPageBtn = () => {
       )}
       {location.pathname.includes("realizacja") && (
         <button className="prev-page-btn" onClick={() => navigate(-1)}>
-          <TfiArrowLeft height={18} width="18" />
+          <TfiArrowLeft />
         </button>
       )}
     </>

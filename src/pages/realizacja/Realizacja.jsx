@@ -31,29 +31,29 @@ const Realizacja = () => {
           </div>
         </div>
         <div className="realizacjaImage-component">
-          <img src={Image1} alt="" />
-          <video loop autoPlay muted>
+          <img className="realizacja-img" src={Image1} alt="" />
+          <video className="realizacja-video" loop autoPlay muted>
             <source src={Video1} />
           </video>
-          <img src={Image2} alt="" />
-          <video loop autoPlay muted>
+          <img className="realizacja-img" src={Image2} alt="" />
+          <video className="realizacja-video" loop autoPlay muted>
             <source src={Video2} />
           </video>
-          <img src={Image3} alt="" />
-          <video loop autoPlay muted>
+          <img className="realizacja-img" src={Image3} alt="" />
+          <video className="realizacja-video" loop autoPlay muted>
             <source src={Video3} />
           </video>
-          <img src={Image4} alt="" />
-          <video loop autoPlay muted>
+          <img className="realizacja-img" src={Image4} alt="" />
+          <video className="realizacja-video" loop autoPlay muted>
             <source src={Video4} />
           </video>
-          <img src={Image5} alt="" />
+          <img className="realizacja-img" src={Image5} alt="" />
 
-          <video loop autoPlay muted>
+          <video className="realizacja-video" loop autoPlay muted>
             <source src={Video5} />
           </video>
-          <img src={Image6} alt="" />
-          <video loop autoPlay muted>
+          <img className="realizacja-img" src={Image6} alt="" />
+          <video className="realizacja-video" loop autoPlay muted>
             <source src={Video6} />
           </video>
         </div>

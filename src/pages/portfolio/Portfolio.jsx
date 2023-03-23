@@ -1,9 +1,13 @@
 import "./portfolioStyles.scss";
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
-import PortfolioImage from "../../components/PortfolioImage/PortfolioImage";
+
 import ScrollTopBtn from "../../components/ScrollTopBtn/ScrollTopBtn";
 
+import React, { lazy, Suspense } from "react";
+const PortfolioImage = lazy(() =>
+  import("../../components/PortfolioImage/PortfolioImage")
+);
 const Portfolio = () => {
   return (
     <>
@@ -11,7 +15,9 @@ const Portfolio = () => {
         <Navbar />
         <main>
           <div className="portfolio-grid">
-            <PortfolioImage />
+            <Suspense>
+              <PortfolioImage />
+            </Suspense>
             <ScrollTopBtn />
           </div>
         </main>
