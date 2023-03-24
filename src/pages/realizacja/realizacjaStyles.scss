@@ -3,7 +3,7 @@
 }
 .realizacjaImage-component {
   display: grid;
-
+  grid-template-columns: repeat(4, 1fr);
   margin-bottom: 96px;
 }
 .realizacja-carousel-component {
@@ -12,4 +12,8 @@
 .realizacja-img,
 .realizacja-video {
   width: 100%;
+  grid-column: 1 / span 4;
+}
+.realizacja-main {
+  margin-inline: 16px;
 }

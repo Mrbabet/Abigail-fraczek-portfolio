@@ -17,7 +17,7 @@ const Realizacja = () => {
   return (
     <div className="realizacjapage">
       <Navbar />
-      <main>
+      <main className="realizacja-main">
         <div className="mobile-realizacja-component">
           <div className="mobile-realizacja-component__title">
             Construction Company Web Concept Design 2023
