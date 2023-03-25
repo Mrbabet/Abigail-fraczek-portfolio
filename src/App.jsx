@@ -6,7 +6,6 @@ import {
 } from "react-router-dom";
 import React, { lazy, Suspense } from "react";
 import "./App.scss";
-import portfolioLinks from "./data";
 
 const Home = lazy(() => import("./pages/home/Home"));
 const Info = lazy(() => import("./pages/info/Info"));

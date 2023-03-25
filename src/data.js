@@ -3,7 +3,7 @@ import BaczekLogo from "../src/assets/images/2. Bączek_Logo/Okładka/Okladka.mp
 import TulleGirl from "../src/assets/images/3. PORTRET-Tulle_Girl/Okładka/Okladka.webp";
 import Jaskolka from "../src/assets/images/4. Jaskółka/Okładka/Okladka.webp";
 import Answear from "../src/assets/images/5. Answear/Okładka/Okladka.mp4";
-import Logofolio from "../src/assets/images/5. Logofolio_2021-22/Okładka/Okladka.webp";
+import Logofolio from "../src/assets/images/6. Logofolio_2021-22/Okładka/Okladka.webp";
 import KamsaDesign from "../src/assets/images/7. Kamsa_Design/Okładka/Okladka.mp4";
 import Freckles from "../src/assets/images/8. PORTRET-Freckles/Okładka/Okladka.webp";
 import DoT36 from "../src/assets/images/9. 36-DoT/Okładka/Okladka.mp4";
@@ -117,16 +117,3 @@ const portfolioLinks = [
 ];
 
 export default portfolioLinks;
-
-import Image1 from "../src/assets/images/1. Bączek_Website/1.webp";
-import Video1 from "../src/assets/images/1. Bączek_Website/2.mp4";
-import Image2 from "../src/assets/images/1. Bączek_Website/3.webp";
-import Video2 from "../src/assets/images/1. Bączek_Website/4.mp4";
-import Image3 from "../src/assets/images/1. Bączek_Website/5.webp";
-import Video3 from "../src/assets/images/1. Bączek_Website/6.mp4";
-import Image4 from "../src/assets/images/1. Bączek_Website/7.webp";
-import Video4 from "../src/assets/images/1. Bączek_Website/8.mp4";
-import Image5 from "../src/assets/images/1. Bączek_Website/9.webp";
-import Video5 from "../src/assets/images/1. Bączek_Website/10.mp4";
-import Image6 from "../src/assets/images/1. Bączek_Website/11.webp";
-import Video6 from "../src/assets/images/1. Bączek_Website/12.mp4";
