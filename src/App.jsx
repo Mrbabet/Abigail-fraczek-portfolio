@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import React, { lazy, Suspense } from "react";
 import "./App.scss";
+import portfolioLinks from "./data";
 
 const Home = lazy(() => import("./pages/home/Home"));
 const Info = lazy(() => import("./pages/info/Info"));
@@ -44,7 +45,7 @@ const router = createBrowserRouter(
         path="portfolio/realizacja/:id"
         element={
           <Suspense fallback={<div>Loading...</div>}>
-            <Realizacja />
+            <Realizacja items={portfolioLinks} />
           </Suspense>
         }
       />

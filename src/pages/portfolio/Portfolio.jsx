@@ -1,9 +1,7 @@
 import "./portfolioStyles.scss";
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
-
 import ScrollTopBtn from "../../components/ScrollTopBtn/ScrollTopBtn";
-
 import React, { lazy, Suspense } from "react";
 const PortfolioImage = lazy(() =>
   import("../../components/PortfolioImage/PortfolioImage")
