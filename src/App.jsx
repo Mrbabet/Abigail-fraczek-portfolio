@@ -45,7 +45,7 @@ const router = createBrowserRouter(
         path="portfolio/realizacja/:id"
         element={
           <Suspense fallback={<div>Loading...</div>}>
-            <Realizacja items={portfolioLinks} />
+            <Realizacja />
           </Suspense>
         }
       />

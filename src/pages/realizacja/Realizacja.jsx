@@ -6,12 +6,15 @@ import MRD from "../../components/MobileRealizacjaDescription/MRD";
 import RealizacjaImage from "../../components/RealizacjaImage/RealizacjaImage";
 
 const Realizacja = () => {
+  const url = window.location.pathname;
+  console.log(url);
+
   return (
     <div className="realizacjapage">
       <Navbar />
       <main className="realizacja-main">
         <MRD />
-        <RealizacjaImage />
+        <RealizacjaImage url={url} />
         <Slideshow />
       </main>
       <Footer />

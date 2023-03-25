@@ -1,5 +1,5 @@
-import React from "react";
 import realizacjaData from "./data";
+import React from "react";
 
 const RealizacjaImage = () => {
   const renderMedia = (mediaItem) => {
