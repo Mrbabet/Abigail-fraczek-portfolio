@@ -44,7 +44,7 @@ const portfolioLinks = [
     Title: "Spring Mark",
     Description: "Symbol jaskółki jako Znak Wiosny.",
     Type: "image",
-    Link: "Jaskółka",
+    Link: "Jaskolka",
   },
   {
     id: 4,
@@ -112,7 +112,7 @@ const portfolioLinks = [
     Description:
       "Koncept identyfikacji wizualnej dla organizacji non-profit Kooperatywa Światła.",
     Type: "video",
-    Link: "KooperatywaŚwiatła",
+    Link: "KooperatywaSwiatla",
   },
 ];
 

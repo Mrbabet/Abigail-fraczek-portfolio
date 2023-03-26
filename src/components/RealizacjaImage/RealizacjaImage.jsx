@@ -1,67 +1,33 @@
 import realizacjaData from "./data";
 import React from "react";
 import { useLocation } from "react-router-dom";
+import NotFound from "../../pages/notFound/NotFound";
 
 const RealizacjaImage = () => {
   const location = useLocation();
 
-  const mediaTypeProps = {
-    image: {
-      className: "realizacja-img",
-      alt: "",
-    },
-    video: {
-      className: "realizacja-video",
-      loop: true,
-      autoPlay: true,
-      muted: true,
-    },
-  };
-
-  const getMediaItems = () => {
-    if (
-      location.pathname ===
-      "/portfolio/realizacja/RealizacjaConstructionCompanyWebConceptDesign"
-    ) {
-      return realizacjaData.flatMap((el) => el.baczekWebsite);
-    } else if (location.pathname === "/portfolio/realizacja/BaczekLogo") {
-      return realizacjaData.flatMap((el) => el.baczekLogo);
-    } else if (location.pathname === "/portfolio/realizacja/TulleGirl") {
-      return realizacjaData.flatMap((el) => el.tulleGirl);
-    } else if (location.pathname === "/portfolio/realizacja/Jaskółka") {
-      return realizacjaData.flatMap((el) => el.jaskolka);
-    } else if (location.pathname === "/portfolio/realizacja/Answear") {
-      return realizacjaData.flatMap((el) => el.answear);
-    } else if (location.pathname === "/portfolio/realizacja/Logofolio") {
-      return realizacjaData.flatMap((el) => el.logofolio);
-    } else if (location.pathname === "/portfolio/realizacja/KamsaDesign") {
-      return realizacjaData.flatMap((el) => el.kamsaDesign);
-    } else if (location.pathname === "/portfolio/realizacja/Freckles") {
-      return realizacjaData.flatMap((el) => el.freckles);
-    } else if (location.pathname === "/portfolio/realizacja/DoT36") {
-      return realizacjaData.flatMap((el) => el.dot36);
-    } else if (location.pathname === "/portfolio/realizacja/Walentynki") {
-      return realizacjaData.flatMap((el) => el.walentynki);
-    } else if (location.pathname === "/portfolio/realizacja/GreenLadyInRed") {
-      return realizacjaData.flatMap((el) => el.greenLadyInRed);
-    } else if (
-      location.pathname === "/portfolio/realizacja/KooperatywaŚwiatła"
-    ) {
-      return realizacjaData.flatMap((el) => el.kooperatywaSwiatla);
-    }
-  };
-
   const renderMedia = (mediaItem) => {
-    const mediaProps = mediaTypeProps[mediaItem.Type];
-    const sourceProps = { src: mediaItem.Source };
+    const mediaProps =
+      mediaItem.Type === "image"
+        ? {
+            className: "realizacja-img",
+            src: mediaItem.Source,
+            alt: "",
+          }
+        : {
+            className: "realizacja-video",
+            loop: true,
+            autoPlay: true,
+            muted: true,
+          };
 
     return (
       <React.Fragment key={mediaItem.id}>
         {mediaItem.Type === "image" ? (
-          <img {...mediaProps} {...sourceProps} />
+          <img {...mediaProps} />
         ) : (
           <video {...mediaProps}>
-            <source {...sourceProps} />
+            <source src={mediaItem.Source} />
           </video>
         )}
       </React.Fragment>
@@ -70,7 +36,36 @@ const RealizacjaImage = () => {
 
   return (
     <div className="realizacjaImage-component">
-      {getMediaItems().map(renderMedia)}
+      {location.pathname ===
+      "/portfolio/realizacja/RealizacjaConstructionCompanyWebConceptDesign" ? (
+        realizacjaData.flatMap((el) => el.baczekWebsite.map(renderMedia))
+      ) : location.pathname === "/portfolio/realizacja/BaczekLogo" ? (
+        realizacjaData.flatMap((el) => el.baczekLogo.map(renderMedia))
+      ) : location.pathname === "/portfolio/realizacja/TulleGirl" ? (
+        realizacjaData.flatMap((el) => el.tulleGirl.map(renderMedia))
+      ) : location.pathname === "/portfolio/realizacja/Jaskolka" ? (
+        realizacjaData.flatMap((el) => el.jaskolka.map(renderMedia))
+      ) : location.pathname === "/portfolio/realizacja/Answear" ? (
+        realizacjaData.flatMap((el) => el.answear.map(renderMedia))
+      ) : location.pathname === "/portfolio/realizacja/Logofolio" ? (
+        realizacjaData.flatMap((el) => el.logofolio.map(renderMedia))
+      ) : location.pathname === "/portfolio/realizacja/KamsaDesign" ? (
+        realizacjaData.flatMap((el) => el.kamsaDesign.map(renderMedia))
+      ) : location.pathname === "/portfolio/realizacja/Freckles" ? (
+        realizacjaData.flatMap((el) => el.freckles.map(renderMedia))
+      ) : location.pathname === "/portfolio/realizacja/36DaysofType" ? (
+        realizacjaData.flatMap((el) => el.dot36.map(renderMedia))
+      ) : location.pathname === "/portfolio/realizacja/Walentynki" ? (
+        realizacjaData.flatMap((el) => el.walentynki.map(renderMedia))
+      ) : location.pathname === "/portfolio/realizacja/GreenLadyInRed" ? (
+        realizacjaData.flatMap((el) => el.greenLadyInRed.map(renderMedia))
+      ) : location.pathname === "/portfolio/realizacja/KooperatywaSwiatla" ? (
+        realizacjaData.flatMap((el) => el.kooperatywaSwiatla.map(renderMedia))
+      ) : location.pathname === "*" ? (
+        <NotFound />
+      ) : (
+        <NotFound />
+      )}
     </div>
   );
 };

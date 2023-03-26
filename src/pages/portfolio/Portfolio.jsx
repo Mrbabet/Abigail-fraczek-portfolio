@@ -6,6 +6,7 @@ import React, { lazy, Suspense } from "react";
 const PortfolioImage = lazy(() =>
   import("../../components/PortfolioImage/PortfolioImage")
 );
+import Loading from "../../components/Loading/Loading";
 const Portfolio = () => {
   return (
     <>
@@ -13,7 +14,7 @@ const Portfolio = () => {
         <Navbar />
         <main>
           <div className="portfolio-grid">
-            <Suspense>
+            <Suspense fallback={<Loading />}>
               <PortfolioImage />
             </Suspense>
             <ScrollTopBtn />

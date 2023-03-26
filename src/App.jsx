@@ -6,6 +6,8 @@ import {
 } from "react-router-dom";
 import React, { lazy, Suspense } from "react";
 import "./App.scss";
+import portfolioLinks from "./components/PortfolioImage/data";
+import Loading from "./components/Loading/Loading";
 
 const Home = lazy(() => import("./pages/home/Home"));
 const Info = lazy(() => import("./pages/info/Info"));
@@ -19,7 +21,7 @@ const router = createBrowserRouter(
       <Route
         index
         element={
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<Loading />}>
             <Home />
           </Suspense>
         }
@@ -27,7 +29,7 @@ const router = createBrowserRouter(
       <Route
         path="info"
         element={
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<Loading />}>
             <Info />
           </Suspense>
         }
@@ -35,63 +37,27 @@ const router = createBrowserRouter(
       <Route
         path="portfolio"
         element={
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<Loading />}>
             <Portfolio />
           </Suspense>
         }
       />
-      <Route
-        path="portfolio/realizacja/RealizacjaConstructionCompanyWebConceptDesign"
-        element={
-          <Suspense fallback={<div>Loading...</div>}>
-            <Realizacja />
-          </Suspense>
-        }
-      />
-      <Route
-        path="portfolio/realizacja/BaczekLogo"
-        element={
-          <Suspense fallback={<div>Loading...</div>}>
-            <Realizacja />
-          </Suspense>
-        }
-      />
-      <Route
-        path="portfolio/realizacja/TulleGirl"
-        element={
-          <Suspense fallback={<div>Loading...</div>}>
-            <Realizacja />
-          </Suspense>
-        }
-      />
-      <Route
-        path="portfolio/realizacja/Jaskółka"
-        element={
-          <Suspense fallback={<div>Loading...</div>}>
-            <Realizacja />
-          </Suspense>
-        }
-      />
-      <Route
-        path="portfolio/realizacja/Answear"
-        element={
-          <Suspense fallback={<div>Loading...</div>}>
-            <Realizacja />
-          </Suspense>
-        }
-      />
-      <Route
-        path="portfolio/realizacja/Logofolio"
-        element={
-          <Suspense fallback={<div>Loading...</div>}>
-            <Realizacja />
-          </Suspense>
-        }
-      />
+      {portfolioLinks.map((el) => (
+        <Route
+          key={el.id}
+          path={`portfolio/realizacja/${el.Link}`}
+          element={
+            <Suspense fallback={<Loading />}>
+              <Realizacja />
+            </Suspense>
+          }
+        />
+      ))}
+
       <Route
         path="*"
         element={
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<Loading />}>
             <NotFound />
           </Suspense>
         }
