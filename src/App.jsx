@@ -41,7 +41,47 @@ const router = createBrowserRouter(
         }
       />
       <Route
-        path="portfolio/realizacja/:id"
+        path="portfolio/realizacja/RealizacjaConstructionCompanyWebConceptDesign"
+        element={
+          <Suspense fallback={<div>Loading...</div>}>
+            <Realizacja />
+          </Suspense>
+        }
+      />
+      <Route
+        path="portfolio/realizacja/BaczekLogo"
+        element={
+          <Suspense fallback={<div>Loading...</div>}>
+            <Realizacja />
+          </Suspense>
+        }
+      />
+      <Route
+        path="portfolio/realizacja/TulleGirl"
+        element={
+          <Suspense fallback={<div>Loading...</div>}>
+            <Realizacja />
+          </Suspense>
+        }
+      />
+      <Route
+        path="portfolio/realizacja/Jaskółka"
+        element={
+          <Suspense fallback={<div>Loading...</div>}>
+            <Realizacja />
+          </Suspense>
+        }
+      />
+      <Route
+        path="portfolio/realizacja/Answear"
+        element={
+          <Suspense fallback={<div>Loading...</div>}>
+            <Realizacja />
+          </Suspense>
+        }
+      />
+      <Route
+        path="portfolio/realizacja/Logofolio"
         element={
           <Suspense fallback={<div>Loading...</div>}>
             <Realizacja />

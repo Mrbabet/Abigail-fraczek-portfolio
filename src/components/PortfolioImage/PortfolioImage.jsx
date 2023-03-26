@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import portfolioLinks from "../../data";
+import portfolioLinks from "./data";
 
 const PortfolioItem = ({ el }) => {
   return (
     <Link
-      to={`/portfolio/realizacja/${el.id}`}
+      to={`/portfolio/realizacja/${el.Link}`}
       key={el.id}
       className="portfolio-image"
     >
