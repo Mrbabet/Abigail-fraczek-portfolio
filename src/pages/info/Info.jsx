@@ -21,6 +21,12 @@ const Glossary = lazy(() =>
 
 const Info = () => {
   const [currentSubNav, setCurrentSubNav] = useState(<Contact />);
+  const [activeButton, setActiveButton] = useState("");
+
+  const handleClick = (component, btnName) => {
+    setCurrentSubNav(<Suspense>{component}</Suspense>);
+    setActiveButton(btnName);
+  };
 
   return (
     <>
@@ -30,54 +36,36 @@ const Info = () => {
           <div className="sub-nav-container">
             <div className="sub-nav">
               <button
-                onClick={() =>
-                  setCurrentSubNav(
-                    <Suspense>
-                      <Contact />
-                    </Suspense>
-                  )
-                }
+                onClick={() => handleClick(<Contact />, "kontakt")}
                 type="button"
-                className="nav-btn"
+                className={`nav-btn ${
+                  activeButton === "kontakt" ? "bold" : ""
+                }`}
               >
                 Kontakt
               </button>
               <button
-                onClick={() =>
-                  setCurrentSubNav(
-                    <Suspense>
-                      <Offer />
-                    </Suspense>
-                  )
-                }
+                onClick={() => handleClick(<Offer />, "oferta")}
                 type="button"
-                className="nav-btn"
+                className={`nav-btn ${activeButton === "oferta" ? "bold" : ""}`}
               >
                 Oferta
               </button>
               <button
-                onClick={() =>
-                  setCurrentSubNav(
-                    <Suspense>
-                      <Informator />
-                    </Suspense>
-                  )
-                }
+                onClick={() => handleClick(<Informator />, "informator")}
                 type="button"
-                className="nav-btn"
+                className={`nav-btn ${
+                  activeButton === "informator" ? "bold" : ""
+                }`}
               >
                 Informator
               </button>
               <button
-                onClick={() =>
-                  setCurrentSubNav(
-                    <Suspense>
-                      <Glossary />
-                    </Suspense>
-                  )
-                }
+                onClick={() => handleClick(<Glossary />, "słowniczek")}
                 type="button"
-                className="nav-btn"
+                className={`nav-btn ${
+                  activeButton === "słowniczek" ? "bold" : ""
+                }`}
               >
                 Słowniczek
               </button>
