@@ -21,7 +21,7 @@ const Glossary = lazy(() =>
 
 const Info = () => {
   const [currentSubNav, setCurrentSubNav] = useState(<Contact />);
-  const [activeButton, setActiveButton] = useState("");
+  const [activeButton, setActiveButton] = useState("kontakt");
 
   const handleClick = (component, btnName) => {
     setCurrentSubNav(<Suspense>{component}</Suspense>);
