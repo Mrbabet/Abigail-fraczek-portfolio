@@ -1,3 +1,5 @@
+import "./App.scss";
+
 import {
   createBrowserRouter,
   Route,
@@ -5,9 +7,10 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import React, { lazy, Suspense } from "react";
-import "./App.scss";
+
 import portfolioLinks from "./components/PortfolioImage/data";
 import Loading from "./components/Loading/Loading";
+import ScrollTop from "./components/ScrollTop/ScrollTop";
 
 const Home = lazy(() => import("./pages/home/Home"));
 const Info = lazy(() => import("./pages/info/Info"));
@@ -21,25 +24,34 @@ const router = createBrowserRouter(
       <Route
         index
         element={
-          <Suspense fallback={<Loading />}>
-            <Home />
-          </Suspense>
+          <>
+            <ScrollTop />
+            <Suspense fallback={<Loading />}>
+              <Home />
+            </Suspense>
+          </>
         }
       />
       <Route
         path="info"
         element={
-          <Suspense fallback={<Loading />}>
-            <Info />
-          </Suspense>
+          <>
+            <ScrollTop />
+            <Suspense fallback={<Loading />}>
+              <Info />
+            </Suspense>
+          </>
         }
       />
       <Route
         path="portfolio"
         element={
-          <Suspense fallback={<Loading />}>
-            <Portfolio />
-          </Suspense>
+          <>
+            <ScrollTop />
+            <Suspense fallback={<Loading />}>
+              <Portfolio />
+            </Suspense>
+          </>
         }
       />
       {portfolioLinks.map((el) => (
@@ -47,9 +59,12 @@ const router = createBrowserRouter(
           key={el.id}
           path={`portfolio/realizacja/${el.Link}`}
           element={
-            <Suspense fallback={<Loading />}>
-              <Realizacja />
-            </Suspense>
+            <>
+              <ScrollTop />
+              <Suspense fallback={<Loading />}>
+                <Realizacja />
+              </Suspense>
+            </>
           }
         />
       ))}
@@ -57,9 +72,12 @@ const router = createBrowserRouter(
       <Route
         path="*"
         element={
-          <Suspense fallback={<Loading />}>
-            <NotFound />
-          </Suspense>
+          <>
+            <ScrollTop />
+            <Suspense fallback={<Loading />}>
+              <NotFound />
+            </Suspense>
+          </>
         }
       />
     </Route>
@@ -67,7 +85,11 @@ const router = createBrowserRouter(
 );
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <>
+      <RouterProvider router={router} />
+    </>
+  );
 }
 
 export default App;
