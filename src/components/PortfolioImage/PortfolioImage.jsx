@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import portfolioLinks from "./data";
-import poster from "../../assets/images/1. Bączek_Website/1.webp";
+
 const PortfolioItem = ({ el }) => {
   return (
     <Link
@@ -11,7 +11,7 @@ const PortfolioItem = ({ el }) => {
       {el.Type === "image" ? (
         <img src={el.Source} alt="" />
       ) : (
-        <video poster={poster} loop autoPlay muted>
+        <video loop autoPlay muted>
           <source src={el.Source} />
         </video>
       )}
