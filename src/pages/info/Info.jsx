@@ -39,7 +39,7 @@ const Info = () => {
                 onClick={() => handleClick(<Contact />, "kontakt")}
                 type="button"
                 className={`nav-btn ${
-                  activeButton === "kontakt" ? "bold" : ""
+                  activeButton === "kontakt" ? "active" : ""
                 }`}
               >
                 Kontakt
@@ -47,7 +47,9 @@ const Info = () => {
               <button
                 onClick={() => handleClick(<Offer />, "oferta")}
                 type="button"
-                className={`nav-btn ${activeButton === "oferta" ? "bold" : ""}`}
+                className={`nav-btn ${
+                  activeButton === "oferta" ? "active" : ""
+                }`}
               >
                 Oferta
               </button>
@@ -55,7 +57,7 @@ const Info = () => {
                 onClick={() => handleClick(<Informator />, "informator")}
                 type="button"
                 className={`nav-btn ${
-                  activeButton === "informator" ? "bold" : ""
+                  activeButton === "informator" ? "active" : ""
                 }`}
               >
                 Informator
@@ -64,7 +66,7 @@ const Info = () => {
                 onClick={() => handleClick(<Glossary />, "słowniczek")}
                 type="button"
                 className={`nav-btn ${
-                  activeButton === "słowniczek" ? "bold" : ""
+                  activeButton === "słowniczek" ? "active" : ""
                 }`}
               >
                 Słowniczek
