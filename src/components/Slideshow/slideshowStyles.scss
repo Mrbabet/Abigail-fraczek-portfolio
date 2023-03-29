@@ -1,0 +1,19 @@
+.carousel {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-item {
+  flex: 0 0 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item.active {
+  transform: translateX(0%);
+}
+
+.carousel-item:not(.active) {
+  transform: translateX(100%);
+}
