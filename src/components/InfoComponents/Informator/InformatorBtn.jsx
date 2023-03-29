@@ -77,23 +77,36 @@ const InformatorBtn = () => {
         "Współprace napędzają biznes, a biznes napędza koszty. Freelancer posiadający własną działalność samodzielnie pokrywa jej opłaty.",
     },
   ];
+
+  const [boldIndex, setBoldIndex] = useState(0);
+
   const [description, setDescription] = useState(
-    "Projektant graficzny posiada wiedzę z zakresu estetyki, optyki, kompozycji, teorii barw, typografii i druku, a także psychologii, marketingu oraz aktualnych trendów."
+    informatorDescriptions[0].description
   );
+
+  const handleButtonClick = (event, index, item) => {
+    event.preventDefault();
+    if (boldIndex === index) {
+      setBoldIndex(null);
+    } else {
+      setBoldIndex(index);
+    }
+    setDescription(item.description);
+  };
+
   return (
     <>
       <div className="click-items__title">Za co płacisz?</div>
       <div className="click-items-btns">
-        {informatorDescriptions.map((description) => (
+        {informatorDescriptions.map((item, index) => (
           <button
+            style={{ fontWeight: boldIndex === index ? "bold" : "normal" }}
+            onClick={(event) => handleButtonClick(event, index, item)}
             type="button"
-            key={description.title}
+            key={index}
             className="click-item-btn"
-            onClick={() => {
-              setDescription(description.description);
-            }}
           >
-            {description.title}
+            {item.title}
           </button>
         ))}
       </div>
