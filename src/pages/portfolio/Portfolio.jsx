@@ -7,22 +7,27 @@ const PortfolioImage = lazy(() =>
   import("../../components/PortfolioImage/PortfolioImage")
 );
 import Loading from "../../components/Loading/Loading";
+import { motion } from "framer-motion";
 const Portfolio = () => {
   return (
     <>
-      <div className="portfoliopage">
+      <motion.div
+        className="portfoliopage"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
         <Navbar />
         <main>
           <div className="portfolio-grid">
-            <Suspense fallback={<Loading />}>
+            <Suspense>
               <PortfolioImage />
             </Suspense>
             <ScrollTopBtn />
           </div>
         </main>
-
         <Footer />
-      </div>
+      </motion.div>
     </>
   );
 };
