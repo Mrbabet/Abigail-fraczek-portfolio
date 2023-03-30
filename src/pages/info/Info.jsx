@@ -1,6 +1,5 @@
 import { useState } from "react";
 import React, { lazy, Suspense } from "react";
-import { motion } from "framer-motion";
 
 import "../info/infoStyles.scss";
 import "../../components/InfoComponents/Contact/contactStyles.scss";
@@ -8,6 +7,7 @@ import "../../components/InfoComponents/Offer/offerStyles.scss";
 
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
+import AnimatedPage from "../../components/AnimatedPage/AnimatedPage";
 
 const Contact = lazy(() =>
   import("../../components/InfoComponents/Contact/Contact")
@@ -30,11 +30,7 @@ const Info = () => {
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
+    <AnimatedPage>
       <Navbar />
       <main>
         <div className="grid-container">
@@ -82,7 +78,7 @@ const Info = () => {
         </div>
       </main>
       <Footer />
-    </motion.div>
+    </AnimatedPage>
   );
 };
 

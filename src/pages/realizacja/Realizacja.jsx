@@ -7,23 +7,21 @@ import MRD from "../../components/MobileRealizacjaDescription/MRD";
 import RealizacjaImage from "../../components/RealizacjaImage/RealizacjaImage";
 // import Slideshow from "../../components/Slideshow/Slideshow";
 import data from "../../components/Slideshow/data";
-import { motion } from "framer-motion";
+import AnimatedPage from "../../components/AnimatedPage/AnimatedPage";
+
 const Realizacja = () => {
   return (
-    <motion.div
-      className="realizacjapage"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
-      <Navbar />
-      <main className="realizacja-main">
-        <MRD />
-        <RealizacjaImage />
-        {/* <Slideshow data={data} /> */}
-      </main>
-      <Footer />
-    </motion.div>
+    <AnimatedPage>
+      <div className="realizacjapage">
+        <Navbar />
+        <main className="realizacja-main">
+          <MRD />
+          <RealizacjaImage />
+          {/* <Slideshow data={data} /> */}
+        </main>
+        <Footer />
+      </div>
+    </AnimatedPage>
   );
 };
 

@@ -3,8 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
 import portfolioLinks from "../../components/PortfolioImage/data";
-import Loading from "../../components/Loading/Loading";
-import ScrollTop from "../../components/ScrollTop/ScrollTop";
+
 import { AnimatePresence } from "framer-motion";
 
 const Home = lazy(() => import("../../pages/home/Home"));
@@ -17,14 +16,17 @@ const AnimatedRoutes = () => {
   const location = useLocation();
   return (
     <>
-      <AnimatePresence>
+      <AnimatePresence
+        mode="wait"
+        initial={false}
+        onExitComplete={() => window.scrollTo(0, 0)}
+      >
         <Routes location={location} key={location.pathname}>
           <Route
             path="/"
             index
             element={
               <>
-                <ScrollTop />
                 <Suspense>
                   <Home />
                 </Suspense>
@@ -35,7 +37,6 @@ const AnimatedRoutes = () => {
             path="info"
             element={
               <>
-                <ScrollTop />
                 <Suspense>
                   <Info />
                 </Suspense>
@@ -46,7 +47,6 @@ const AnimatedRoutes = () => {
             path="portfolio"
             element={
               <>
-                <ScrollTop />
                 <Suspense>
                   <Portfolio />
                 </Suspense>
@@ -59,7 +59,6 @@ const AnimatedRoutes = () => {
               path={`portfolio/realizacja/${el.Link}`}
               element={
                 <>
-                  <ScrollTop />
                   <Suspense>
                     <Realizacja />
                   </Suspense>
@@ -71,7 +70,6 @@ const AnimatedRoutes = () => {
             path="*"
             element={
               <>
-                <ScrollTop />
                 <Suspense>
                   <NotFound />
                 </Suspense>
