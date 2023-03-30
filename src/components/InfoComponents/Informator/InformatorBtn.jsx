@@ -79,7 +79,6 @@ const InformatorBtn = () => {
   ];
 
   const [boldIndex, setBoldIndex] = useState(0);
-
   const [description, setDescription] = useState(
     informatorDescriptions[0].description
   );
@@ -87,7 +86,7 @@ const InformatorBtn = () => {
   const handleButtonClick = (event, index, item) => {
     event.preventDefault();
     if (boldIndex === index) {
-      setBoldIndex(null);
+      return;
     } else {
       setBoldIndex(index);
     }
