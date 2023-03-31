@@ -19,7 +19,7 @@ const portfolioLinks = [
     Description:
       "Koncept interfejsu strony internetowej polskiej firmy budowlanej PRS-Bud Bączek.",
     Type: "video",
-    Link: "RealizacjaConstructionCompanyWebConceptDesign",
+    Link: "Realizacja1",
   },
   {
     id: 1,
@@ -28,7 +28,7 @@ const portfolioLinks = [
     Description:
       "Realizacja logo dla polskiej firmy budowlanej PRS-Bud Bączek.",
     Type: "video",
-    Link: "BaczekLogo",
+    Link: "Realizacja2",
   },
   {
     id: 2,
@@ -36,7 +36,7 @@ const portfolioLinks = [
     Title: "Tulle Girl",
     Description: "Ilustracja.",
     Type: "image",
-    Link: "TulleGirl",
+    Link: "Realizacja3",
   },
   {
     id: 3,
@@ -44,7 +44,7 @@ const portfolioLinks = [
     Title: "Spring Mark",
     Description: "Symbol jaskółki jako Znak Wiosny.",
     Type: "image",
-    Link: "Jaskolka",
+    Link: "Realizacja4",
   },
   {
     id: 4,
@@ -53,7 +53,7 @@ const portfolioLinks = [
     Description:
       "Seria grafik reklamowych produktów Answear stworzona w ramach Answear Graphic Design Masters.",
     Type: "video",
-    Link: "Answear",
+    Link: "Realizacja5",
   },
   {
     id: 5,
@@ -61,7 +61,7 @@ const portfolioLinks = [
     Title: "Logos & Marks 2021-2022",
     Description: "Kolekcja znaków stworzona w latach 2021-2022.",
     Type: "image",
-    Link: "Logofolio",
+    Link: "Realizacja6",
   },
   {
     id: 6,
@@ -70,7 +70,7 @@ const portfolioLinks = [
     Description:
       "Realizacja logo dla marki Kamsa Design wyspecjalizowanej w tworzeniu wizualizacji wnętrz 3D.",
     Type: "video",
-    Link: "KamsaDesign",
+    Link: "Realizacja7",
   },
   {
     id: 7,
@@ -78,7 +78,7 @@ const portfolioLinks = [
     Title: "Freckles",
     Description: "Ilustracja",
     Type: "image",
-    Link: "Freckles",
+    Link: "Realizacja8",
   },
   {
     id: 8,
@@ -87,7 +87,7 @@ const portfolioLinks = [
     Description:
       "Kolekcja znaków stworzona w ramach challenge’u 36 Days of Type 2021.",
     Type: "video",
-    Link: "36DaysofType",
+    Link: "Realizacja9",
   },
   {
     id: 9,
@@ -95,7 +95,7 @@ const portfolioLinks = [
     Title: "Valentine’s Day Illustration",
     Description: "Miłość - Ilustracja walentynkowa.",
     Type: "image",
-    Link: "Walentynki",
+    Link: "Realizacja10",
   },
   {
     id: 10,
@@ -103,7 +103,7 @@ const portfolioLinks = [
     Title: "Green Lady in Red",
     Description: "Ilustracja.",
     Type: "image",
-    Link: "GreenLadyInRed",
+    Link: "Realizacja11",
   },
   {
     id: 11,
@@ -112,7 +112,7 @@ const portfolioLinks = [
     Description:
       "Koncept identyfikacji wizualnej dla organizacji non-profit Kooperatywa Światła.",
     Type: "video",
-    Link: "KooperatywaSwiatla",
+    Link: "Realizacja12",
   },
 ];
 

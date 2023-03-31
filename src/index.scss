@@ -82,3 +82,11 @@ p,
 li {
   text-align: justify;
 }
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+}
+#detach-button-host {
+  display: none;
+}

@@ -3,15 +3,11 @@ import portfolioLinks from "./data";
 
 const PortfolioItem = ({ el }) => {
   return (
-    <Link
-      to={`/portfolio/realizacja/${el.Link}`}
-      key={el.id}
-      className="portfolio-image"
-    >
+    <Link to={`/portfolio/${el.Link}`} key={el.id} className="portfolio-image">
       {el.Type === "image" ? (
         <img src={el.Source} alt="" />
       ) : (
-        <video loop autoPlay muted>
+        <video loop autoPlay muted playsInline>
           <source src={el.Source} />
         </video>
       )}

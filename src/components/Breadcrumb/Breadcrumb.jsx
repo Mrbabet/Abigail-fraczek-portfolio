@@ -1,5 +1,6 @@
 import { NavLink, useLocation } from "react-router-dom";
 import "./breadcrumbStyles.scss";
+import breadcrumbDescriptions from "./data";
 
 const Breadcrumb = () => {
   const location = useLocation();
@@ -7,7 +8,7 @@ const Breadcrumb = () => {
   const crumbs = location.pathname
     .split("/")
     .filter((crumb) => crumb !== "")
-    .map((crumb) => {
+    .map((crumb, index, array) => {
       currentLink += `/${crumb}`;
 
       return (

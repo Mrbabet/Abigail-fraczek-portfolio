@@ -56,7 +56,7 @@ const AnimatedRoutes = () => {
           {portfolioLinks.map((el) => (
             <Route
               key={el.id}
-              path={`portfolio/realizacja/${el.Link}`}
+              path={`portfolio/${el.Link}`}
               element={
                 <>
                   <Suspense>
