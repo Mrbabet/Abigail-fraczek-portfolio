@@ -1,9 +1,10 @@
 import { NavLink, useLocation } from "react-router-dom";
 import "./breadcrumbStyles.scss";
-import breadcrumbDescriptions from "./data";
+import MRD from "../MobileRealizacjaDescription/MRD";
 
 const Breadcrumb = () => {
   const location = useLocation();
+
   let currentLink = "";
   const crumbs = location.pathname
     .split("/")
@@ -19,31 +20,17 @@ const Breadcrumb = () => {
     });
 
   return (
-    <div className="breadcrumbs">
-      <div className="crumb">
-        <NavLink to="/" className="logo">
-          Abigail Frączek
-        </NavLink>
-      </div>
+    <>
+      <div className="breadcrumbs">
+        <div className="crumb">
+          <NavLink to="/" className="logo">
+            Abigail Frączek
+          </NavLink>
+        </div>
 
-      {crumbs}
-      {breadcrumbDescriptions.flatMap((el) =>
-        el.baczekWebsite.map((el) => {
-          return (
-            <>
-              {location.pathname.startsWith("/portfolio/Realizacja") ? (
-                <>
-                  <span className="breadcrumb-title">{el.title}</span>
-                  <span className="breadcrumb-description">
-                    {el.description}
-                  </span>
-                </>
-              ) : null}
-            </>
-          );
-        })
-      )}
-    </div>
+        {crumbs}
+      </div>
+    </>
   );
 };
 

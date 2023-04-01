@@ -37,29 +37,29 @@ const RealizacjaImage = () => {
 
   return (
     <div className="realizacjaImage-component">
-      {location.pathname === "/portfolio/Realizacja1" ? (
+      {location.pathname === "/portfolio/realizacja1" ? (
         realizacjaData.flatMap((el) => el.baczekWebsite.map(renderMedia))
-      ) : location.pathname === "/portfolio/Realizacja2" ? (
+      ) : location.pathname === "/portfolio/realizacja2" ? (
         realizacjaData.flatMap((el) => el.baczekLogo.map(renderMedia))
-      ) : location.pathname === "/portfolio/Realizacja3" ? (
+      ) : location.pathname === "/portfolio/realizacja3" ? (
         realizacjaData.flatMap((el) => el.tulleGirl.map(renderMedia))
-      ) : location.pathname === "/portfolio/Realizacja4" ? (
+      ) : location.pathname === "/portfolio/realizacja4" ? (
         realizacjaData.flatMap((el) => el.jaskolka.map(renderMedia))
-      ) : location.pathname === "/portfolio/Realizacja5" ? (
+      ) : location.pathname === "/portfolio/realizacja5" ? (
         realizacjaData.flatMap((el) => el.answear.map(renderMedia))
-      ) : location.pathname === "/portfolio/Realizacja6" ? (
+      ) : location.pathname === "/portfolio/realizacja6" ? (
         realizacjaData.flatMap((el) => el.logofolio.map(renderMedia))
-      ) : location.pathname === "/portfolio/Realizacja7" ? (
+      ) : location.pathname === "/portfolio/realizacja7" ? (
         realizacjaData.flatMap((el) => el.kamsaDesign.map(renderMedia))
-      ) : location.pathname === "/portfolio/Realizacja8" ? (
+      ) : location.pathname === "/portfolio/realizacja8" ? (
         realizacjaData.flatMap((el) => el.freckles.map(renderMedia))
-      ) : location.pathname === "/portfolio/Realizacja9" ? (
+      ) : location.pathname === "/portfolio/realizacja9" ? (
         realizacjaData.flatMap((el) => el.dot36.map(renderMedia))
-      ) : location.pathname === "/portfolio/Realizacja10" ? (
+      ) : location.pathname === "/portfolio/realizacja10" ? (
         realizacjaData.flatMap((el) => el.walentynki.map(renderMedia))
-      ) : location.pathname === "/portfolio/Realizacja11" ? (
+      ) : location.pathname === "/portfolio/realizacja11" ? (
         realizacjaData.flatMap((el) => el.greenLadyInRed.map(renderMedia))
-      ) : location.pathname === "/portfolio/Realizacja12" ? (
+      ) : location.pathname === "/portfolio/realizacja12" ? (
         realizacjaData.flatMap((el) => el.kooperatywaSwiatla.map(renderMedia))
       ) : location.pathname === "*" ? (
         <NotFound />
