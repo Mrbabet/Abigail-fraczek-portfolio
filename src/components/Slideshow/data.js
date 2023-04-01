@@ -11,7 +11,7 @@ import Walentynki from "../../assets/images/10. Walentynki/Okładka/Okladka.png"
 import GreenLadyInRed from "../../assets/images/11. PORTRET-Green_Lady_in_Red/Okładka/Okladka.webp";
 import KooperatywaSwiatla from "../../assets/images/12. Kooperatywa_Światła/Okładka/Okladka.mp4";
 
-const data = [
+const sliderData = [
   {
     Source: BaczekWebsite,
     alt: "Construction Company Web Concept Design",
@@ -86,4 +86,4 @@ const data = [
   },
 ];
 
-export default data;
+export default sliderData;

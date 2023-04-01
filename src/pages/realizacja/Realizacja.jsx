@@ -5,8 +5,7 @@ import Navbar from "../../components/Navbar/Navbar";
 
 import MRD from "../../components/MobileRealizacjaDescription/MRD";
 import RealizacjaImage from "../../components/RealizacjaImage/RealizacjaImage";
-// import Slideshow from "../../components/Slideshow/Slideshow";
-import data from "../../components/Slideshow/data";
+import Slideshow from "../../components/Slideshow/Slideshow";
 import AnimatedPage from "../../components/AnimatedPage/AnimatedPage";
 
 const Realizacja = () => {
@@ -17,7 +16,7 @@ const Realizacja = () => {
         <main className="realizacja-main">
           <MRD />
           <RealizacjaImage />
-          {/* <Slideshow data={data} /> */}
+          <Slideshow />
         </main>
         <Footer />
       </div>

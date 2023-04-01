@@ -1,23 +1,12 @@
-import React, { useState, useEffect } from "react";
+import sliderData from "./data";
+import Marquee from "react-fast-marquee";
+import "./slideshowStyles.scss";
 
-const Slideshow = ({ data }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((currentIndex + 1) % data.length);
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, [currentIndex, data]);
-
+const Slideshow = () => {
   return (
-    <div className="carousel">
-      {data.map((item, index) => (
-        <div
-          key={index}
-          className={`carousel-item ${index === currentIndex ? "active" : ""}`}
-        >
+    <Marquee className="slider" speed={120} gradient={false}>
+      {sliderData.map((item, index) => (
+        <div key={index} className="carousel-item">
           {item.Type === "image" ? (
             <img src={item.Source} />
           ) : (
@@ -27,7 +16,7 @@ const Slideshow = ({ data }) => {
           )}
         </div>
       ))}
-    </div>
+    </Marquee>
   );
 };
 
