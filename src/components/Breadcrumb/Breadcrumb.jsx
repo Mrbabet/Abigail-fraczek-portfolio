@@ -31,8 +31,14 @@ const Breadcrumb = () => {
         el.baczekWebsite.map((el) => {
           return (
             <>
-              <span className="breadcrumb-title">{el.title}</span>
-              <span className="breadcrumb-description">{el.description}</span>
+              {location.pathname.startsWith("/portfolio/Realizacja") ? (
+                <>
+                  <span className="breadcrumb-title">{el.title}</span>
+                  <span className="breadcrumb-description">
+                    {el.description}
+                  </span>
+                </>
+              ) : null}
             </>
           );
         })
