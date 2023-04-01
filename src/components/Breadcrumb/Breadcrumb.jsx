@@ -11,10 +11,10 @@ const Breadcrumb = () => {
     .filter((crumb) => crumb !== "")
     .map((crumb, index, array) => {
       currentLink += `/${crumb}`;
-
+      const crumbLabel = crumb.includes("realizacja") ? "Realizacja" : crumb;
       return (
         <div className="crumb" key={crumb}>
-          <NavLink to={currentLink}>{crumb}</NavLink>
+          <NavLink to={currentLink}>{crumbLabel}</NavLink>
         </div>
       );
     });

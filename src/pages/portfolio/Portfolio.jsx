@@ -9,6 +9,7 @@ const PortfolioImage = lazy(() =>
 import Loading from "../../components/Loading/Loading";
 
 import AnimatedPage from "../../components/AnimatedPage/AnimatedPage";
+import InformatorCard from "../../components/InformatorCard/InformatorCard";
 const Portfolio = () => {
   return (
     <AnimatedPage>
@@ -18,6 +19,7 @@ const Portfolio = () => {
           <div className="portfolio-grid">
             <Suspense>
               <PortfolioImage />
+              <InformatorCard />
             </Suspense>
             {/* <ScrollTopBtn /> */}
           </div>

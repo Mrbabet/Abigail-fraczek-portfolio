@@ -1,6 +1,7 @@
 import "./mrdStyles.scss";
 import breadcrumbDescriptions from "../../components/Breadcrumb/data";
 import NotFound from "../../pages/notFound/NotFound";
+import React from "react";
 
 const MRD = () => {
   // Create an object that maps each path to the corresponding breadcrumb data
@@ -29,13 +30,13 @@ const MRD = () => {
   return (
     <div className="mobile-realizacja-component">
       {breadcrumbData ? (
-        breadcrumbData.map((el) => (
-          <>
+        breadcrumbData.map((el, index) => (
+          <React.Fragment key={index}>
             <div className="mobile-realizacja-component__title">{el.title}</div>
             <div className="mobile-realizacja-component__description">
               {el.description}
             </div>
-          </>
+          </React.Fragment>
         ))
       ) : (
         <NotFound />
