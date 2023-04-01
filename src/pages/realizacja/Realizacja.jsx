@@ -18,6 +18,7 @@ const Realizacja = () => {
           <RealizacjaImage />
           <Slideshow />
         </main>
+
         <Footer />
       </div>
     </AnimatedPage>
