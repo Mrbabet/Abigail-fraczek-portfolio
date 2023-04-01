@@ -1,4 +1,4 @@
-import "../Carousel/carouselStyles.scss";
+import "./carouselStyles.scss";
 import Marquee from "react-fast-marquee";
 
 const Carousel = () => {

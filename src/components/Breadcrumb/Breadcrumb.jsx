@@ -25,7 +25,18 @@ const Breadcrumb = () => {
           Abigail Frączek
         </NavLink>
       </div>
+
       {crumbs}
+      {breadcrumbDescriptions.flatMap((el) =>
+        el.baczekWebsite.map((el) => {
+          return (
+            <>
+              <span className="breadcrumb-title">{el.title}</span>
+              <span className="breadcrumb-description">{el.description}</span>
+            </>
+          );
+        })
+      )}
     </div>
   );
 };
