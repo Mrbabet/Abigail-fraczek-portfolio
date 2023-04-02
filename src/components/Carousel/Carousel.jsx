@@ -3,7 +3,7 @@ import Marquee from "react-fast-marquee";
 
 const Carousel = () => {
   return (
-    <Marquee speed={120} gradient={false}>
+    <Marquee className="text-slider" speed={120} gradient={false}>
       <div className="carousel">
         <div className="carousel-slider">
           <div className="carousel-list">
