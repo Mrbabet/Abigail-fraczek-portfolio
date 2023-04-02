@@ -32,7 +32,12 @@ const MRD = () => {
       {breadcrumbData ? (
         breadcrumbData.map((el, index) => (
           <React.Fragment key={index}>
-            <div className="mobile-realizacja-component__title">{el.title}</div>
+            <div className="mobile-realizacja-component__title">
+              {el.title}
+              <div className="mobile-realizacja-component__title-year">
+                {el.year}
+              </div>
+            </div>
             <div className="mobile-realizacja-component__description">
               {el.description}
             </div>

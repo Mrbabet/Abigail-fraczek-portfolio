@@ -1,0 +1,27 @@
+.realizacjaImage-component {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 16px;
+  margin-bottom: 96px;
+  @media screen and (min-width: 820px) {
+    grid-template-columns: repeat(6, 1fr);
+    margin-top: 144px;
+  }
+  @media screen and (min-width: 1280px) {
+    grid-template-columns: repeat(12, 1fr);
+    margin-top: 144px;
+  }
+}
+
+.realizacja-img,
+.realizacja-video {
+  width: 100%;
+  grid-column: 1 / span 4;
+  @media screen and (min-width: 820px) {
+    grid-column: 1 / span 6;
+  }
+  @media screen and (min-width: 1280px) {
+    grid-template-columns: repeat(12, 1fr);
+    grid-column: 2 / span 10;
+  }
+}

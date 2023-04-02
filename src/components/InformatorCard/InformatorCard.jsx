@@ -32,12 +32,11 @@ const InformatorCard = () => {
         </div>
         <div className="description-2">
           Informator: <br />
-          <NavLink>
+          <NavLink to={"/info"}>
             Spójna identyfikacja
             <br />
             wizualna - dlaczego <br />
             warto w nią zainwestować? <br />
-            marki?
           </NavLink>
         </div>
         <div className="arrow"></div>
@@ -51,7 +50,7 @@ const InformatorCard = () => {
         </div>
         <div className="description-2">
           Informator: <br />
-          <NavLink>
+          <NavLink to={"/info"}>
             Strona www -<br />
             jakie niesie korzyści? <br />
           </NavLink>
