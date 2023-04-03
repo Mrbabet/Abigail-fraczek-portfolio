@@ -1,20 +1,40 @@
 import realizacjaData from "./data";
-import React from "react";
+import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import NotFound from "../../pages/notFound/NotFound";
+import { useInView } from "react-intersection-observer";
 
 import "./realizacjaimageStyles.scss";
 
 const RealizacjaImage = () => {
   const location = useLocation();
+  const { ref, inView } = useInView({
+    threshold: 0.5,
+    triggerOnce: true,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      const images = Array.from(document.querySelectorAll(".realizacja-img"));
+      images.forEach((img) => {
+        img.src = img.dataset.src;
+      });
+
+      const videos = Array.from(document.querySelectorAll(".realizacja-video"));
+      videos.forEach((video) => {
+        video.src = video.dataset.src;
+      });
+    }
+  }, [inView]);
 
   const renderMedia = (mediaItem) => {
     const mediaProps =
       mediaItem.Type === "image"
         ? {
             className: "realizacja-img",
-            src: mediaItem.Source,
+            src: inView ? mediaItem.Source : "",
             alt: "",
+            "data-src": mediaItem.Source,
           }
         : {
             className: "realizacja-video",
@@ -22,6 +42,8 @@ const RealizacjaImage = () => {
             autoPlay: true,
             muted: true,
             playsInline: true,
+            src: inView ? mediaItem.Source : "",
+            "data-src": mediaItem.Source,
           };
 
     return (
@@ -36,9 +58,8 @@ const RealizacjaImage = () => {
       </React.Fragment>
     );
   };
-
   return (
-    <div className="realizacjaImage-component">
+    <div className="realizacjaImage-component" ref={ref}>
       {location.pathname === "/portfolio/realizacja1" ? (
         realizacjaData.flatMap((el) => el.baczekWebsite.map(renderMedia))
       ) : location.pathname === "/portfolio/realizacja2" ? (
