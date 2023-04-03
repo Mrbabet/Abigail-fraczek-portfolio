@@ -1,5 +1,5 @@
 import realizacjaData from "./data";
-import React, { useEffect } from "react";
+import React, { useRef } from "react";
 import { useLocation } from "react-router-dom";
 import NotFound from "../../pages/notFound/NotFound";
 import { useInView } from "react-intersection-observer";
@@ -13,28 +13,13 @@ const RealizacjaImage = () => {
     triggerOnce: true,
   });
 
-  useEffect(() => {
-    if (inView) {
-      const images = Array.from(document.querySelectorAll(".realizacja-img"));
-      images.forEach((img) => {
-        img.src = img.dataset.src;
-      });
-
-      const videos = Array.from(document.querySelectorAll(".realizacja-video"));
-      videos.forEach((video) => {
-        video.src = video.dataset.src;
-      });
-    }
-  }, [inView]);
-
   const renderMedia = (mediaItem) => {
     const mediaProps =
       mediaItem.Type === "image"
         ? {
             className: "realizacja-img",
-            src: inView ? mediaItem.Source : "",
+            src: mediaItem.Source,
             alt: "",
-            "data-src": mediaItem.Source,
           }
         : {
             className: "realizacja-video",
@@ -42,18 +27,20 @@ const RealizacjaImage = () => {
             autoPlay: true,
             muted: true,
             playsInline: true,
-            src: inView ? mediaItem.Source : "",
-            "data-src": mediaItem.Source,
           };
 
     return (
       <React.Fragment key={mediaItem.id}>
-        {mediaItem.Type === "image" ? (
-          <img {...mediaProps} />
+        {inView ? (
+          mediaItem.Type === "image" ? (
+            <img {...mediaProps} />
+          ) : (
+            <video {...mediaProps}>
+              <source src={mediaItem.Source} />
+            </video>
+          )
         ) : (
-          <video {...mediaProps}>
-            <source src={mediaItem.Source} />
-          </video>
+          <div className="realizacja-placeholder"></div>
         )}
       </React.Fragment>
     );
