@@ -3,10 +3,10 @@ import "./realizacjaStyles.scss";
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 
-import MRD from "../../components/MobileRealizacjaDescription/MRD";
 import RealizacjaImage from "../../components/RealizacjaImage/RealizacjaImage";
 import Slideshow from "../../components/Slideshow/Slideshow";
 import AnimatedPage from "../../components/AnimatedPage/AnimatedPage";
+import RealizacjaDescription from "../../components/RealizacjaDescription/RealizacjaDescription";
 
 const Realizacja = () => {
   return (
@@ -14,7 +14,7 @@ const Realizacja = () => {
       <div className="realizacjapage">
         <Navbar />
         <main className="realizacja-main">
-          <MRD />
+          <RealizacjaDescription />
           <RealizacjaImage />
           <Slideshow />
         </main>

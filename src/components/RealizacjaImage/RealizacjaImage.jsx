@@ -8,11 +8,6 @@ import "./realizacjaimageStyles.scss";
 const RealizacjaImage = () => {
   const location = useLocation();
 
-  const { ref, inView } = useInView({
-    threshold: 0.9, // set the threshold to 50%
-    triggerOnce: true, // trigger only once
-  });
-
   const renderMedia = (mediaItem) => {
     const mediaProps =
       mediaItem.Type === "image"

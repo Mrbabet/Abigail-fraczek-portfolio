@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import "./informatorcardStyles.scss";
 
 const InformatorCard = () => {
   return (
@@ -13,10 +14,10 @@ const InformatorCard = () => {
         <div className="description-2">
           Informator: <br />
           <NavLink to={"/info"}>
-            Dlaczego logo <br />
-            to ważny element <br />
-            w budowaniu <br />
-            marki?
+            <span>Dlaczego logo</span> <br />
+            <span>to ważny element</span> <br />
+            <span> w budowaniu</span> <br />
+            <span>marki?</span>
           </NavLink>
         </div>
         <div className="arrow"></div>
@@ -33,10 +34,10 @@ const InformatorCard = () => {
         <div className="description-2">
           Informator: <br />
           <NavLink to={"/info"}>
-            Spójna identyfikacja
+            <span> Spójna identyfikacja</span>
             <br />
-            wizualna - dlaczego <br />
-            warto w nią zainwestować? <br />
+            <span>wizualna - dlaczego</span> <br />
+            <span>warto w nią zainwestować?</span> <br />
           </NavLink>
         </div>
         <div className="arrow"></div>
@@ -51,8 +52,9 @@ const InformatorCard = () => {
         <div className="description-2">
           Informator: <br />
           <NavLink to={"/info"}>
-            Strona www -<br />
-            jakie niesie korzyści? <br />
+            <span>Strona www -</span>
+            <br />
+            <span>jakie niesie korzyści?</span> <br />
           </NavLink>
         </div>
         <div className="arrow"></div>

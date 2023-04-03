@@ -6,7 +6,6 @@ import React, { lazy, Suspense } from "react";
 const PortfolioImage = lazy(() =>
   import("../../components/PortfolioImage/PortfolioImage")
 );
-import Loading from "../../components/Loading/Loading";
 
 import AnimatedPage from "../../components/AnimatedPage/AnimatedPage";
 import InformatorCard from "../../components/InformatorCard/InformatorCard";

@@ -1,6 +1,5 @@
 import { NavLink, useLocation } from "react-router-dom";
 import "./breadcrumbStyles.scss";
-import MRD from "../MobileRealizacjaDescription/MRD";
 
 const Breadcrumb = () => {
   const location = useLocation();

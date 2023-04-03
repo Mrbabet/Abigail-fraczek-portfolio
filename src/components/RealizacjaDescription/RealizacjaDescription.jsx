@@ -1,9 +1,9 @@
-import "./mrdStyles.scss";
-import breadcrumbDescriptions from "../../components/Breadcrumb/data";
+import "./realizacjadescriptionStyles.scss";
+import breadcrumbDescriptions from "../Breadcrumb/data";
 import NotFound from "../../pages/notFound/NotFound";
 import React from "react";
 
-const MRD = () => {
+const RealizacjaDescription = () => {
   // Create an object that maps each path to the corresponding breadcrumb data
   const pathToData = {
     "/portfolio/realizacja1": "baczekWebsite",
@@ -50,4 +50,4 @@ const MRD = () => {
   );
 };
 
-export default MRD;
+export default RealizacjaDescription;
