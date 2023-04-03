@@ -1,12 +1,17 @@
 import realizacjaData from "./data";
-import React from "react";
+import React, { useRef } from "react";
 import { useLocation } from "react-router-dom";
 import NotFound from "../../pages/notFound/NotFound";
+import { useInView } from "react-intersection-observer";
 
 import "./realizacjaimageStyles.scss";
 
 const RealizacjaImage = () => {
   const location = useLocation();
+  const { ref, inView } = useInView({
+    threshold: 0.5,
+    triggerOnce: true,
+  });
 
   const renderMedia = (mediaItem) => {
     const mediaProps =
@@ -26,19 +31,23 @@ const RealizacjaImage = () => {
 
     return (
       <React.Fragment key={mediaItem.id}>
-        {mediaItem.Type === "image" ? (
-          <img {...mediaProps} />
+        {inView ? (
+          mediaItem.Type === "image" ? (
+            <img {...mediaProps} />
+          ) : (
+            <video {...mediaProps}>
+              <source src={mediaItem.Source} />
+            </video>
+          )
         ) : (
-          <video {...mediaProps}>
-            <source src={mediaItem.Source} />
-          </video>
+          <div className="realizacja-placeholder"></div>
         )}
       </React.Fragment>
     );
   };
 
   return (
-    <div className="realizacjaImage-component">
+    <div className="realizacjaImage-component" ref={ref}>
       {location.pathname === "/portfolio/realizacja1" ? (
         realizacjaData.flatMap((el) => el.baczekWebsite.map(renderMedia))
       ) : location.pathname === "/portfolio/realizacja2" ? (
