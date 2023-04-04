@@ -23,3 +23,13 @@
     }
   }
 }
+.information:hover {
+  color: black;
+  span {
+    padding-block: 1px;
+    border-bottom: 1px solid black;
+  }
+  a {
+    color: black;
+  }
+}

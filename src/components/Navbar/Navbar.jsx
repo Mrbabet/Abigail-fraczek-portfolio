@@ -10,11 +10,9 @@ const Navbar = () => {
       <Breadcrumb />
       <div className="right-side">
         {location.pathname !== "/info" && (
-          <div className="info-btn">
-            <NavLink to="/info" className="info-link">
-              Info
-            </NavLink>
-          </div>
+          <NavLink to="/info" className="info-link">
+            Info
+          </NavLink>
         )}
         <PrevPageBtn />
       </div>
