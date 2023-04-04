@@ -11,10 +11,10 @@ const Showreal = () => {
           <video className="showreal-video" autoPlay loop muted playsInline>
             <source src={ShowrealVideo} />
           </video>
+          <NavLink to="/portfolio" className="portfolio-link">
+            Portfolio
+          </NavLink>
         </div>
-        <NavLink to="/portfolio" className="portfolio-link">
-          Portfolio
-        </NavLink>
       </div>
     </>
   );
