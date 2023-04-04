@@ -24,6 +24,7 @@ const PortfolioItem = ({ el }) => {
               <source src={el.Source} />
             </video>
           )}
+
           <div className="portfolio-image__text">
             <h4 className="title">{el.Title}</h4>
             <p className="description">{el.Description}</p>
