@@ -5,6 +5,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    mix-blend-mode: exclusion;
+    filter: invert(1);
   }
   .carousel-item {
     font-weight: 400;

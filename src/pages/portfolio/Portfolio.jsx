@@ -20,7 +20,7 @@ const Portfolio = () => {
               <PortfolioImage />
               <InformatorCard />
             </Suspense>
-            {/* <ScrollTopBtn /> */}
+            <ScrollTopBtn />
           </div>
         </main>
         <Footer />

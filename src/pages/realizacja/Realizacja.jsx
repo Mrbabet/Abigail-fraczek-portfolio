@@ -7,6 +7,7 @@ import RealizacjaImage from "../../components/RealizacjaImage/RealizacjaImage";
 import Slideshow from "../../components/Slideshow/Slideshow";
 import AnimatedPage from "../../components/AnimatedPage/AnimatedPage";
 import RealizacjaDescription from "../../components/RealizacjaDescription/RealizacjaDescription";
+import ScrollTopBtn from "../../components/ScrollTopBtn/ScrollTopBtn";
 
 const Realizacja = () => {
   return (
@@ -16,6 +17,7 @@ const Realizacja = () => {
         <main className="realizacja-main">
           <RealizacjaDescription />
           <RealizacjaImage />
+          <ScrollTopBtn />
           <Slideshow />
         </main>
 

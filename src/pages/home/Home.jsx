@@ -6,9 +6,11 @@ import Carousel from "../../components/Carousel/Carousel";
 import Showreal from "../../components/Showreal/Showreal";
 
 import AnimatedPage from "../../components/AnimatedPage/AnimatedPage";
+import Preloader from "../../components/Preloader/Preloader";
 const Home = () => {
   return (
     <AnimatedPage>
+      <Preloader minimumTime={10000} />
       <div className="homepage">
         <Navbar />
         <Carousel />

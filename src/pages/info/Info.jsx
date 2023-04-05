@@ -8,6 +8,7 @@ import "../../components/InfoComponents/Offer/offerStyles.scss";
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 import AnimatedPage from "../../components/AnimatedPage/AnimatedPage";
+import ScrollTopBtn from "../../components/ScrollTopBtn/ScrollTopBtn";
 
 const Contact = lazy(() =>
   import("../../components/InfoComponents/Contact/Contact")
@@ -76,6 +77,7 @@ const Info = () => {
           </div>
           {currentSubNav}
         </div>
+        <ScrollTopBtn />
       </main>
       <Footer />
     </AnimatedPage>

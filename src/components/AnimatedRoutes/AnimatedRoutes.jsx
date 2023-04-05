@@ -3,7 +3,6 @@ import { Route, Routes } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
 import portfolioLinks from "../../components/PortfolioImage/data";
-
 import { AnimatePresence } from "framer-motion";
 
 const Home = lazy(() => import("../../pages/home/Home"));
