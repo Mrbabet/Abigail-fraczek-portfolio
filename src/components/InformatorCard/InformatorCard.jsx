@@ -20,7 +20,6 @@ const InformatorCard = () => {
             <span>marki?</span>
           </NavLink>
         </div>
-        <div className="arrow"></div>
       </div>
       <div className="information">
         <div className="description-1">
@@ -40,7 +39,6 @@ const InformatorCard = () => {
             <span>warto w nią zainwestować?</span> <br />
           </NavLink>
         </div>
-        <div className="arrow"></div>
       </div>
       <div className="information">
         <div className="description-1">
@@ -57,7 +55,6 @@ const InformatorCard = () => {
             <span>jakie niesie korzyści?</span> <br />
           </NavLink>
         </div>
-        <div className="arrow"></div>
       </div>
     </>
   );
