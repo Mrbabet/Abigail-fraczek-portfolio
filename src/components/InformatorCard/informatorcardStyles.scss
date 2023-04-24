@@ -1,9 +1,10 @@
-.information {
+.information-link {
   font-family: "DM Sans";
   display: flex;
   flex-direction: column;
   gap: 16px;
   color: #a6a39f;
+  text-decoration: none;
   .description-1 {
     font-size: 20px;
     line-height: 25px;

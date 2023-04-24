@@ -4,7 +4,6 @@ import NotFound from "../../pages/notFound/NotFound";
 import React from "react";
 
 const RealizacjaDescription = () => {
-  // Create an object that maps each path to the corresponding breadcrumb data
   const pathToData = {
     "/portfolio/realizacja1": "baczekWebsite",
     "/portfolio/realizacja2": "baczekLogo",
