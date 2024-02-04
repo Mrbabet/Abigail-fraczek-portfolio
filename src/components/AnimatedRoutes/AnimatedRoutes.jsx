@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from "react";
+import React, { lazy } from "react";
 import { Route, Routes } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
@@ -21,60 +21,17 @@ const AnimatedRoutes = () => {
         initial={false}
       >
         <Routes location={location} key={location.pathname}>
-          <Route
-            path="/"
-            index
-            element={
-              <>
-                <Suspense>
-                  <Home />
-                </Suspense>
-              </>
-            }
-          />
-          <Route
-            path="info"
-            element={
-              <>
-                <Suspense>
-                  <Info />
-                </Suspense>
-              </>
-            }
-          />
-          <Route
-            path="portfolio"
-            element={
-              <>
-                <Suspense>
-                  <Portfolio />
-                </Suspense>
-              </>
-            }
-          />
+          <Route path="/" index element={<Home />} />
+          <Route path="info" element={<Info />} />
+          <Route path="portfolio" element={<Portfolio />} />
           {portfolioLinks.map((el) => (
             <Route
               key={el.id}
               path={`portfolio/${el.Link}`}
-              element={
-                <>
-                  <Suspense>
-                    <Realizacja />
-                  </Suspense>
-                </>
-              }
+              element={<Realizacja />}
             />
           ))}
-          <Route
-            path="*"
-            element={
-              <>
-                <Suspense>
-                  <NotFound />
-                </Suspense>
-              </>
-            }
-          />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </AnimatePresence>
     </>
