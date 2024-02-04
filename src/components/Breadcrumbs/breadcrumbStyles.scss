@@ -1,0 +1,22 @@
+ol {
+  padding: 0;
+  margin: 0;
+}
+
+.breadcrumbs {
+  display: flex;
+  flex-direction: column;
+
+  a {
+    text-decoration: none;
+    color: black;
+    text-transform: capitalize;
+    font-family: "DM Sans";
+  }
+}
+.breadcrumbs {
+  @media screen and (min-width: 820px) {
+    flex-direction: row;
+    gap: 16px;
+  }
+}

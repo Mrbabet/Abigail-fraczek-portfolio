@@ -1,5 +1,5 @@
 import "./realizacjadescStyles.scss";
-import breadcrumbDescriptions from "../Breadcrumb/data";
+import breadcrumbDescriptions from "../Breadcrumbs/data";
 import NotFound from "../../pages/notFound/NotFound";
 import React from "react";
 
